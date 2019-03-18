@@ -1,0 +1,16 @@
+str1= input("Enter your first sequence of values separated by commas: ") 
+if ',' not in str1:
+    print('Please enter sequence separated by commas!')
+else:
+    str2= input("Enter your second sequence of values separated by commas: ")
+    if ',' not in str2:
+        print('Please enter second sequence separated by commas!')
+    else:
+        list1 = [x.strip() for x in str1.split(',')]
+        list2 = [x.strip() for x in str2.split(',')]
+
+        set1= set(list1)
+        set2= set(list2)
+
+        print('The elements in the two sets together are: ',set1.union(set2))
+        print('The common elements in the two sets are: ',set1.intersection(set2))
