@@ -1,0 +1,23 @@
+def create_dict(my_list):
+    
+    my_d= {}
+    for word in my_list:
+        
+        if word[0] not in my_d.keys():
+            
+            my_d[word[0]]= []
+            my_d[word[0]].append(word)
+        else:
+            my_d[word[0]].append(word)
+    return my_d
+
+def main():
+    user_lst= input("Enter your list of words: ")
+    if  ',' not in user_lst and '""' in user_lst or "''" in user_lst:
+        print("Enter list of words separated by commas and without qoutes!")
+    else:
+        my_list= [x.strip() for x in user_lst.split(',')]
+        print('my list is  ', my_list)
+        print(create_dict(my_list))
+            
+main()
