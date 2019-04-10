@@ -1,0 +1,66 @@
+'''
+In this notebook we will define the Automobile class.
+First we describe the attributes and methods for the class.
+The Automobile class has the following attributes:
+1.  Make
+2.  Model
+4.  Mileage
+5.  Speed
+
+The class has the accessor (get) methods as well as the mutator (set) methods for each instance variable listed above. 
+The class also has the __str__ method redefined
+In addition the class has the following two methods:
+1.  accelerate():  Every time this method is called, the speed of the automobile increases by 5 miles
+2.  brake():  Every time this method is called, the speed of the automobile decreases by 5 miles
+'''
+
+class Automobile:
+    def __init__(self, make, model, mileage, speed):
+        self.__make = make
+        self.__model = model
+        self.__mileage = mileage
+        self.__speed = speed
+        
+    def get_make(self):
+        return self.__make
+    
+    def get_model(self):
+        return self.__model
+
+    def get_mileage(self):
+        return self.__mileage
+    
+    def get_speed(self):
+        return self.__speed
+    
+    def set_make(self, mk):
+        self.__make = mk
+    
+    def set_model(self, md):
+        self.__model = md
+    
+    def set_mileage(self, m):
+        self._mileage = m
+    
+    def set_speed(self, s):
+        reself.__speed = s
+        
+    def accelerate(self):
+        self.__speed += 5
+        
+    def brake(self):
+        self.__speed -= 5
+    
+    def __str__(self):
+        return 'Make: ' + self.__make + ', Model: ' + self.__model  + ', Mileage '  + str(self.__mileage)  + ', current speed: ' + str(self.__speed)
+
+'''
+Test out the class definition by creating a car object and testing out different methods.
+'''
+car2 = Automobile('Honda','Accord',1555,85)
+print(car2)
+car2.brake()
+car2.brake()
+print(car2)
+car2.accelerate()
+print(car2)
