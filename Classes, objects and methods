@@ -1,6 +1,6 @@
 '''
-In this notebook we will define the Automobile class.
-First we describe the attributes and methods for the class.
+We will define the Automobile class.
+
 The Automobile class has the following attributes:
 1.  Make
 2.  Model
@@ -8,8 +8,7 @@ The Automobile class has the following attributes:
 5.  Speed
 
 The class has the accessor (get) methods as well as the mutator (set) methods for each instance variable listed above. 
-The class also has the __str__ method redefined
-In addition the class has the following two methods:
+class has the following two methods:
 1.  accelerate():  Every time this method is called, the speed of the automobile increases by 5 miles
 2.  brake():  Every time this method is called, the speed of the automobile decreases by 5 miles
 '''
